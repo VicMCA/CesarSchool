@@ -1,4 +1,5 @@
 ## Hello everyone!  
+###### This is the cursed timeline, welcome. There's a ghost here somewhere.
   
 Me chamo Victor, embora acho esse nome meio arrogante e não combina comigo. Aceito apelidos. Estou atualmente cursando o Next e amando aprender Python. Estou também ansiosíssimo para aprender Java. Como sou agoniado, também já estou estudando HTML, CSS e já já chego em JavaScript pelo freecodecamp.org.  
   
