@@ -1,4 +1,4 @@
-def fileToData(file, array):
+def file_to_data(file, array):
     """
     Transforma cada linha do arquivo em um item de uma lista, retirando o \n
     """
@@ -10,7 +10,7 @@ def fileToData(file, array):
     return array
 
 
-def dataSort(firstArray, secondArray, originArray):
+def data_sort(firstArray, secondArray, originArray):
     """
     Separa as datas dos valores de lucro/perda
     """
@@ -21,7 +21,7 @@ def dataSort(firstArray, secondArray, originArray):
     return firstArray, secondArray
 
 
-def variMinMax(valores):
+def variance_min_max(valores):
     """
     Atribui a variancia de cada mês à itens de uma lista
     """
@@ -35,43 +35,43 @@ def formato(datas):
     """
     Modifica o texto das datas para formato mais adequado ao relatório
     """
-    mesLong = ['Janeiro de ', 'Fevereiro de ', 'Março de ', 'Abril de ', 'Maio de ', 'Junho de ',
+    mes_longo = ['Janeiro de ', 'Fevereiro de ', 'Março de ', 'Abril de ', 'Maio de ', 'Junho de ',
     'Julho de ', 'Agosto de ', 'Setembro de ', 'Outubro de ', 'Novembro de ', 'Dezembro de ']
-    mesShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    mes_curto = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     mes = ano = ''
-    datasLong = []
+    datas_longo = []
 
     for x in datas:
         mes, ano = x.split('-')
-        for y in range(0, len(mesShort)):
-            if mes == mesShort[y]:
-                mes = mesLong[y]
-        dataCompleta = mes + ano
-        datasLong.append(dataCompleta)
+        for y in range(0, len(mes_curto)):
+            if mes == mes_curto[y]:
+                mes = mes_longo[y]
+        data_completa = mes + ano
+        datas_longo.append(data_completa)
         pass
 
-    return datasLong
+    return datas_longo
 
 
 def report(datas, valores, variancia):
     """
     Gera texto do relatório
     """
-    totalMeses = (len(datas))
-    valorLiquido = sum(int(x) for x in valores)
-    varianciaMedia = (sum(variancia)/(totalMeses-1))
-    posMaiorLucro = variancia.index(max(variancia))
-    posMaiorPerda = variancia.index(min(variancia))
+    total_meses = (len(datas))
+    valor_liquido = sum(int(x) for x in valores)
+    variancia_media = (sum(variancia)/(total_meses-1))
+    indice_maior_lucro = variancia.index(max(variancia))
+    indice_maior_perda = variancia.index(min(variancia))
 
-    textoRelatorio = ('Análise Financeira\n'
+    texto_relatorio = ('Análise Financeira\n'
     +'-----------------------------------------------------------\n'
-    +f'Total de meses:\t\t\t{totalMeses} meses\n'
-    +f'Total arrecadado:\t\t$ {valorLiquido}\n'
-    +f'Variação da média:\t\t$ {round(varianciaMedia, 2)}\n'
-    +f'Maior aumento nos lucros:\t{datas[posMaiorLucro+1]} ($ {max(variancia)})\n'
-    +f'Maior redução nos lucros:\t{datas[posMaiorPerda+1]} ($ {min(variancia)})\n')
+    +f'Total de meses:\t\t\t{total_meses} meses\n'
+    +f'Total arrecadado:\t\t$ {valor_liquido}\n'
+    +f'Variação da média:\t\t$ {round(variancia_media, 2)}\n'
+    +f'Maior aumento nos lucros:\t{datas[indice_maior_lucro+1]} ($ {max(variancia)})\n'
+    +f'Maior redução nos lucros:\t{datas[indice_maior_perda+1]} ($ {min(variancia)})\n')
 
-    return textoRelatorio
+    return texto_relatorio
 
 
 def main():
@@ -83,17 +83,17 @@ def main():
     valores = []
 
     with open('CesarSchool/CESARNextDesafioPython/PyFinanceiro/Recursos/dados_financeiro.txt', 'r') as dados:
-        matriz = fileToData(dados, matriz)
+        matriz = file_to_data(dados, matriz)
     
-    datas, valores = (dataSort(datas, valores, matriz))
-    variancia = variMinMax(valores)
+    datas, valores = (data_sort(datas, valores, matriz))
+    variancia = variance_min_max(valores)
     datas = formato(datas)
-    textoRelatorio = report(datas, valores, variancia)
+    texto_relatorio = report(datas, valores, variancia)
 
     with open('relatório.txt', 'w') as relatorio:
-        relatorio.write(textoRelatorio)
+        relatorio.write(texto_relatorio)
 
-    print(textoRelatorio)
+    print(texto_relatorio)
 
 
 if __name__ == '__main__':

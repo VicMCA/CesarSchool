@@ -17,19 +17,19 @@ def main():
     * Obs.: Salário Bruto - Descontos = Salário Líquido.
     '''
     print('Bem-vindo(a). Para lhe auxiliar no cálculo de seu rendimento líquido, por favor informe:')
-    precoHora = float(input('O valor/hora de seu trabalho > R$ '))
-    totalHora = float(input('O total de horas trabalhadas neste mês > '))
-    rendBruto = precoHora * totalHora
-    descIR = rendBruto * 0.11
-    descINSS = rendBruto * 0.08
-    descSind = rendBruto * 0.05
-    rendLiq = rendBruto - descINSS - descIR - descSind
+    preco_hora = float(input('O valor/hora de seu trabalho > R$ '))
+    total_horas = float(input('O total de horas trabalhadas neste mês > '))
+    rend_bruto = preco_hora * total_horas
+    desc_IR = rend_bruto * 0.11
+    desc_INSS = rend_bruto * 0.08
+    desc_sind = rend_bruto * 0.05
+    rend_liq = rend_bruto - desc_INSS - desc_IR - desc_sind
 
-    result = (f'''Rendimento bruto: R$ {rendBruto}
-    Imposto de renda: R$ {descIR}
-    Taxa do INSS: R$ {descINSS}
-    Taxa do sindicato: R$ {descSind}
-    Rendimento líquido: R$ {rendLiq}''')
+    result = (f'''Rendimento bruto: R$ {rend_bruto}
+    Imposto de renda: R$ {desc_IR}
+    Taxa do INSS: R$ {desc_INSS}
+    Taxa do sindicato: R$ {desc_sind}
+    Rendimento líquido: R$ {rend_liq}''')
 
     result = result.replace('    ', '')
     print(result)

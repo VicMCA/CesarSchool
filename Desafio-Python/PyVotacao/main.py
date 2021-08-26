@@ -27,7 +27,7 @@ def main():
     Vencedor = max(candidates, key=candidates.get)
     # print(candidates)
 
-    textoResultado = ('Resultados Eleitorais\n'
+    texto_resultado = ('Resultados Eleitorais\n'
     +'------------------------\n'
     +f'Total de votos: {len(ballot)}\n'
     +'------------------------\n'
@@ -40,9 +40,9 @@ def main():
     +'------------------------')
 
     with open('Resultado.txt', 'w') as resultado:
-        resultado.write(textoResultado)
+        resultado.write(texto_resultado)
 
-    print(textoResultado)
+    print(texto_resultado)
 
 
 if __name__ == '__main__':

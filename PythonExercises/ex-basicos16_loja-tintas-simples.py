@@ -9,10 +9,10 @@ def main():
     '''
     print('Bem vindo(a) ao Varejo Paredarte, vamos conferir quantas latas você precisa!')
     area = float(input('Informe a área a ser pintada em m², não é necessário digitar a unidade de medida: '))
-    areaTinta = area / 3
-    quantLatas = (areaTinta / 18) if (areaTinta % 18 == 0) else (areaTinta // 18 + 1)
+    area_tinta = area / 3
+    quant_latas = (area_tinta / 18) if (area_tinta % 18 == 0) else (area_tinta // 18 + 1)
     
-    print(f'Você precisará de {int(quantLatas)} latas. O custo total será de R$ {quantLatas * 80}.')
+    print(f'Você precisará de {int(quant_latas)} latas. O custo total será de R$ {quant_latas * 80}.')
 
 
 if __name__ == '__main__':

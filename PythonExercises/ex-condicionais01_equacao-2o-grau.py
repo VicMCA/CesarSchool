@@ -16,8 +16,8 @@ def main():
 
     delta = b**2 - (4*a*c)
     
-    xpos = (-b + (delta ** 1/2)) / (2 * a)
-    xneg = (-b - (delta ** 1/2)) / (2 * a)
+    x_pos = (-b + (delta ** 1/2)) / (2 * a)
+    x_neg = (-b - (delta ** 1/2)) / (2 * a)
     
     if a == 0:
         print('Esta equação é do primeiro grau e não será computada.')
@@ -28,7 +28,7 @@ def main():
             print('O delta resulta em zero, e há apenas uma raíz real.')
             print(f'A raíz é de {-b / (2 * a)}')
         else:
-            print(f'As duas raízes são {round(xpos, 2)} e {round(xneg, 2)}')
+            print(f'As duas raízes são {round(x_pos, 2)} e {round(x_neg, 2)}')
 
 
 if __name__ == '__main__':

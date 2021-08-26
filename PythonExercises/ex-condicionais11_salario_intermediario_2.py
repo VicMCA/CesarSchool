@@ -24,33 +24,33 @@ def main():
 
     '''
     print('Bem vindo(a).  Para o cálculo de sua folha de pagamento para este mês, por favor informe:')
-    trabHoras = int(input('Quantidade de horas trabalhadas >> '))
-    trabCusto = int(input('Valor da sua hora de trabalho >> R$ '))
+    trab_horas = int(input('Quantidade de horas trabalhadas >> '))
+    trab_custo = int(input('Valor da sua hora de trabalho >> R$ '))
 
-    salBruto = trabHoras * trabCusto
-    descINSS = salBruto * 0.10
-    descSind = salBruto * 0.03
-    bonusFGTS = salBruto * 0.11
+    sal_bruto = trab_horas * trab_custo
+    desc_INSS = sal_bruto * 0.10
+    desc_sind = sal_bruto * 0.03
+    bonus_FGTS = sal_bruto * 0.11
     
-    if salBruto <= 900: descIR = 0
-    if salBruto <= 900: percIR = 'ISENTO'
-    if 900 < salBruto <= 1500: descIR = salBruto * 0.05
-    if 900 < salBruto <= 1500: percIR = ' 5% = '
-    if 1500 < salBruto <= 2500: descIR = salBruto * 0.1
-    if 1500 < salBruto <= 2500: percIR = '10% = '
-    if 2500 < salBruto: descIR = salBruto * 0.2
-    if 2500 < salBruto: percIR = '20% = '
+    if sal_bruto <= 900: desc_IR = 0
+    if sal_bruto <= 900: perc_IR = 'ISENTO'
+    if 900 < sal_bruto <= 1500: desc_IR = sal_bruto * 0.05
+    if 900 < sal_bruto <= 1500: perc_IR = ' 5% = '
+    if 1500 < sal_bruto <= 2500: desc_IR = sal_bruto * 0.1
+    if 1500 < sal_bruto <= 2500: perc_IR = '10% = '
+    if 2500 < sal_bruto: desc_IR = sal_bruto * 0.2
+    if 2500 < sal_bruto: perc_IR = '20% = '
     
-    totalDesc = descINSS + descIR
-    salLiqui = salBruto - totalDesc
+    total_desc = desc_INSS + desc_IR
+    sal_liqui = sal_bruto - total_desc
 
-    resultado = (f'''Salário Bruto = R$ {salBruto}
-    Desconto do IR: {percIR}{descIR}
-    Desconto do INSS: 10% = {descINSS}
-    Taxa do Sindicato: 3% = {descSind}
-    Bônus do FGTS: 11% = {bonusFGTS}
-    Total de descontos = R$ {totalDesc}
-    Salário Líquido = R$ {salLiqui}''')
+    resultado = (f'''Salário Bruto = R$ {sal_bruto}
+    Desconto do IR: {perc_IR}{desc_IR}
+    Desconto do INSS: 10% = {desc_INSS}
+    Taxa do Sindicato: 3% = {desc_sind}
+    Bônus do FGTS: 11% = {bonus_FGTS}
+    Total de descontos = R$ {total_desc}
+    Salário Líquido = R$ {sal_liqui}''')
 
     print(resultado.replace('    ', ''))
 

@@ -19,9 +19,9 @@ def main():
         else:
             print('Sua entrada custa R$ 20,00. Seja bem-vindo(a)!')
     else:
-        profedante = str(input('Você é estudante ou professor? s/n : '))
-        profedante = profedante.lower()
-        if profedante == 's':
+        prof_estudante = str(input('Você é estudante ou professor? s/n : '))
+        prof_estudante = prof_estudante.lower()
+        if prof_estudante == 's':
             print('Sua entrada custa R$ 15,00. Seja bem-vindo(a)!')
         else:
             print('Sua entrada custa R$ 30,00. Seja bem-vindo(a)!')
