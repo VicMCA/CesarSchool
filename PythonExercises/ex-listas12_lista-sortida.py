@@ -7,9 +7,9 @@ def main():
     num2 = float(input('Informe o segundo número: '))
     num3 = float(input('Informe o terceiro número: '))
 
-    semOrdem = [num1, num2, num3]
-    semOrdem.sort(reverse = True)
-    print(semOrdem)
+    sem_ordem = [num1, num2, num3]
+    sem_ordem.sort(reverse = True)
+    print(sem_ordem)
     
 
 if __name__ == '__main__':

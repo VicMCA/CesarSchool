@@ -18,20 +18,20 @@ def main():
         print('Programa encerrado.')
     elif escolha == 1:
         temperatura = float(input('Informe a temperatura em Celsius: '))
-        print(f'A temperatura em Fahrenheit é de {celToFahr(temperatura)}\nPrograma encerrado.')
+        print(f'A temperatura em Fahrenheit é de {celsius_to_fahr(temperatura)}\nPrograma encerrado.')
     elif escolha == 2:
         temperatura = float(input('Informe a temperatura em Fahrenheit: '))
-        print(f'A temperatura em Fahrenheit é de {fahrToCel(temperatura)}\nPrograma encerrado.')
+        print(f'A temperatura em Fahrenheit é de {fahr_to_cel(temperatura)}\nPrograma encerrado.')
 
 
-def celToFahr(temp):
-    cTf = round(((temp * 1.8) + 32), 2)
-    return cTf
+def celsius_to_fahr(temp):
+    ctf = round(((temp * 1.8) + 32), 2)
+    return ctf
 
 
-def fahrToCel(temp):
-    fTc = round((5 * ((temp - 32)) / 9), 2)
-    return fTc
+def fahr_to_cel(temp):
+    ftc = round((5 * ((temp - 32)) / 9), 2)
+    return ftc
 
 
 if __name__ == '__main__':

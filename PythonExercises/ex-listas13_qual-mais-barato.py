@@ -4,11 +4,11 @@ def main():
     produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
     '''
     print('Informe o preço de três produtos para que eu lhe diga qual comprar.')
-    prodA = float(input('Informe o preço do primeiro produto: R$ '))
-    prodB = float(input('Informe o preço do segundo produto: R$ '))
-    prodC = float(input('Informe o preço do terceiro produto: R$ '))
+    prod_a = float(input('Informe o preço do primeiro produto: R$ '))
+    prod_b = float(input('Informe o preço do segundo produto: R$ '))
+    prod_c = float(input('Informe o preço do terceiro produto: R$ '))
 
-    produtos = [prodA, prodB, prodC]
+    produtos = [prod_a, prod_b, prod_c]
     prodNome = ['primeiro produto', 'segundo produto', 'terceiro produto']
 
     barato = produtos[0]

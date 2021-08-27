@@ -5,7 +5,7 @@ def main():
     um número inteiro informado pelo usuário.
     '''
     num = int(input('Informe um número inteiro para verificarmos os números primos entre um e ele: '))
-    listaPrimos = []
+    lista_primos = []
 
     for x in range(2, num + 1):
         divCount = 0
@@ -13,9 +13,9 @@ def main():
             if x % y == 0:
                 divCount = divCount + 1
         if divCount < 3:
-            listaPrimos.append(x)
+            lista_primos.append(x)
 
-    print(listaPrimos)
+    print(lista_primos)
 
 
 if __name__ == '__main__':

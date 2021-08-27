@@ -18,7 +18,7 @@ def main():
     print('Bem vindo(a) ao Varejo Paredarte, vamos conferir quantas latas ou galões você precisa!')
     area = float(input('Informe a área a ser pintada em m², não é necessário digitar a unidade de medida: '))
     area = area * 1.1
-    quantLatas = quantGalao = 0
+    quant_latas = quant_galao = 0
 
     opcoes = ('''Você pode consultar o preço necessário em:
     [1]\tApenas latas de 18L por R$ 80,00 cada
@@ -37,32 +37,32 @@ def main():
         print('Tudo bem, até a próxima então!')
 
     if escolha == '1':
-        quantLatas = (area / 108) if (area % 108 == 0) else (area // 108 + 1)
+        quant_latas = (area / 108) if (area % 108 == 0) else (area // 108 + 1)
         print(f'Quantidade de litros necessária para a área informada: {round(area, 2)}')
-        print(f'Você precisará de {int(quantLatas)} latas. O custo total será de R$ {quantLatas * 80}.')
+        print(f'Você precisará de {int(quant_latas)} latas. O custo total será de R$ {quant_latas * 80}.')
 
     if escolha == '2':
-        quantGalao = (area / 21.6) if (area % 21.6 == 0) else (area // 21.6 + 1)
+        quant_galao = (area / 21.6) if (area % 21.6 == 0) else (area // 21.6 + 1)
         print(f'Quantidade de litros necessária para a área informada: {round(area, 2)}')
-        print(f'Você precisará de {int(quantGalao)} galões. O custo total será de R$ {quantGalao * 25}.')
+        print(f'Você precisará de {int(quant_galao)} galões. O custo total será de R$ {quant_galao * 25}.')
 
     if escolha == '3':
         if (area % 108 == 0):
-            quantLatas = (area/108)
+            quant_latas = (area/108)
         else:
             excedente = (area % 108)
-            quantLatas = (area // 108)
+            quant_latas = (area // 108)
             if (area % 108 > (21.6 * 3)) and (area % 108 < (21.6 * 5)):
-                quantLatas = quantLatas + 1
-                quantGalao = 0
+                quant_latas = quant_latas + 1
+                quant_galao = 0
             else:
                 if (area % 21.6 == 0):
-                    quantGalao = (excedente / 21.6)
+                    quant_galao = (excedente / 21.6)
                 else:
-                    quantGalao = (excedente // 21.6 + 1)
+                    quant_galao = (excedente // 21.6 + 1)
         print(f'Quantidade de litros necessária para a área informada: {round(area, 2)}')
-        print(f'Você precisará de {int(quantLatas)} latas e {quantGalao} galões.')
-        print(f'O custo total será de R$ {(quantLatas * 80) + (quantGalao * 25)}.')
+        print(f'Você precisará de {int(quant_latas)} latas e {quant_galao} galões.')
+        print(f'O custo total será de R$ {(quant_latas * 80) + (quant_galao * 25)}.')
 
 
 if __name__ == '__main__':

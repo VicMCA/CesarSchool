@@ -7,10 +7,10 @@ def main():
     l = [1, 2, 3]
 
     def reverse(lista):
-        listaAux = []
+        lista_aux = []
         for x in lista:
-            listaAux.insert(0, x)
-        return listaAux
+            lista_aux.insert(0, x)
+        return lista_aux
     
     print(reverse(l))
     

@@ -4,14 +4,14 @@ def main():
     de cada caractere da palavra. Imprima a string resultante.
     '''
     word = input('Por favor, informe uma palavra qualquer: ')
-    wordP1 = []
+    word_p1 = []
 
     for x in word:
         temp = chr(ord(x)+1)
-        wordP1.append(temp)
+        word_p1.append(temp)
     
-    wordP1 = ('').join(wordP1)
-    print(wordP1)
+    word_p1 = ('').join(word_p1)
+    print(word_p1)
     
 
 if __name__ == '__main__':

@@ -6,18 +6,18 @@ def main():
     frase = input('Por favor, informe uma frase qualquer, ela será convertida em binário: ')
     print(f'Frase informada  = {frase}')
     
-    fbin = ''.join(format(ord(x), '08b') for x in frase)
-    print(f'Frase em binário = {fbin}')
+    f_bin = ''.join(format(ord(x), '08b') for x in frase)
+    print(f'Frase em binário = {f_bin}')
     
-    countZero = 0
-    countOne = 0
+    count_zero = 0
+    count_one = 0
 
-    for x in fbin:
-        if x == '0': countZero += 1
-        if x == '1': countOne += 1
+    for x in f_bin:
+        if x == '0': count_zero += 1
+        if x == '1': count_one += 1
 
-    print(f'Total de "0"s na frase= {countZero}')
-    print(f'Total de "1"s na frase= {countOne}')
+    print(f'Total de "0"s na frase= {count_zero}')
+    print(f'Total de "1"s na frase= {count_one}')
     
 
 if __name__ == '__main__':

@@ -5,9 +5,9 @@ def main():
     dos números deve ser feita em uma função e a exibição dos 
     valores em ordem contrária deve ocorrer em outra função.
     '''
-    numList = []
-    numList = leitura(numList)
-    inverte(numList)
+    num_list = []
+    num_list = leitura(num_list)
+    inverte(num_list)
 
 
 def leitura(lista):

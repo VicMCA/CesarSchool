@@ -8,21 +8,21 @@ def main():
     c) ordem de prioridades inversa
     d) quantidade de itens
     '''
-    locaisVisita = []
-    locaisTotal = int(input('Quantos locais você deseja visitar na sua vida? >> '))
+    locais_visita = []
+    locais_total = int(input('Quantos locais você deseja visitar na sua vida? >> '))
     print('Abaixo digite os locais a visitar na ordem do que mais deseja para o que menos deseja: ')
-    for x in range(0, locaisTotal):
+    for x in range(0, locais_total):
         local = input('Nome do local >> ')
-        locaisVisita.append(local)
+        locais_visita.append(local)
     
-    locaisAlfab = sorted(locaisVisita)
-    locaisRever = locaisVisita[:]
-    locaisRever.reverse()
+    locais_alfab = sorted(locais_visita)
+    locais_rever = locais_visita[:]
+    locais_rever.reverse()
     
-    print(f'Os locais que você deseja visitar: {locaisVisita}')
-    print(f'Os locais que você deseja visitar em ordem alfabética: {locaisAlfab}')
-    print(f'Os locais que você deseja visitar em ordem invertida: {locaisRever}')
-    print(f'Quantidade de locais que deseja visitar: {len(locaisVisita)}')
+    print(f'Os locais que você deseja visitar: {locais_visita}')
+    print(f'Os locais que você deseja visitar em ordem alfabética: {locais_alfab}')
+    print(f'Os locais que você deseja visitar em ordem invertida: {locais_rever}')
+    print(f'Quantidade de locais que deseja visitar: {len(locais_visita)}')
 
 
 if __name__ == '__main__':

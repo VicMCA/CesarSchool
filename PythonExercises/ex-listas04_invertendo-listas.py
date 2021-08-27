@@ -5,9 +5,9 @@ def main():
     b) Um vetor V3 cujo tamanho seja o número correspondente aos dígitos invertidos
     do tamanho do vetor V1. (ex: V1 com 12 elementos, V3 com 21 elementos)
     '''
-    quantItens = int(input('Quantos itens a lista V1 deve ter? '))
+    quant_itens = int(input('Quantos itens a lista V1 deve ter? '))
 
-    V1 = list(range(0, quantItens))
+    V1 = list(range(0, quant_itens))
     print(f'Primeiro vetor "V1": {V1}')
     V2 = V1[:]
     V2.reverse()

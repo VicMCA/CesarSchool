@@ -11,11 +11,11 @@ def main():
 
 
 def fatorial(valor):
-    fatorLista = []
-    for x in range (1, valor): fatorLista.append(x)
+    fator_lista = []
+    for x in range (1, valor): fator_lista.append(x)
     
     res = 1
-    for x in fatorLista: res = res + (res * x)
+    for x in fator_lista: res = res + (res * x)
 
     print(f'O fatorial de {valor} é {res}')
 

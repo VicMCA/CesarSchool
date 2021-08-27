@@ -4,25 +4,25 @@ def main():
     um nome que será buscado nesta lista. A busca deve ser implementada em 
     uma função que retorna os valores lógicos verdadeiro ou falso.
     '''
-    listaNomes = listaPessoas()
+    lista_nomes = lista_pessoas()
 
     nome = input('Olá, por quem você deseja procurar? ')
     nome = nome.lower()
 
-    if (buscaNome(listaNomes, nome) == True):
+    if (busca_nome(lista_nomes, nome) == True):
         print('Certo, encontramos aqui na lista!')
     else:
         print('Infelizmente este nome não consta aqui.')
 
 
-def buscaNome(lista, pessoa):
+def busca_nome(lista, pessoa):
     for x in lista:
         if x == pessoa:
             return True
     return False
 
 
-def listaPessoas():
+def lista_pessoas():
     listaTotal = ['alice', 'ana', 'amelia', 'amanda', 'artur', 'astrid', 'aline', 'arnaldo', 'andre',
     'beatriz', 'bianca', 'bruno', 'breno', 'barbara', 'bernardo', 'camila', 'caio', 'cecilia', 'carina',
     'cintia','catarina', 'carol', 'diana', 'denis', 'darla', 'daniela', 'diego', 'douglas', 'debora', 'eva',
