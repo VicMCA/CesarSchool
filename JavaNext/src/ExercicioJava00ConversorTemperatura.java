@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ConversorTemperatura {
+public class ExercicioJava00ConversorTemperatura {
     public static void main(String[] args) {
         
         int unidade = 0;
