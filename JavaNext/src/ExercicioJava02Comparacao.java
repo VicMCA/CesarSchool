@@ -1,4 +1,9 @@
-public class ExercicioJava02Comparacao {
+/*
+Crie uma classe chamada Comparacao e mande criar o método main.
+No método main implemente um programa que possui três variáveis locais:
+x, y e z e em seguida imprime os números em ordem crescente.
+*/
+public class ExercicioJava02Comparacao {    
     public static void main(String[] args) throws Exception{
         int x = 5;
         int y = 2;

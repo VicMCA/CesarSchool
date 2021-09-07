@@ -1,5 +1,11 @@
-import java.util.InputMismatchException;
+/*
+Crie um programa para converter temperaturas entre a unidade que o usuário escolher
+dentre 5 unidades disponíveis (Celsius, Fahrenheit, Kelvin, Réaumur e Rankine)
+e as exiba nas outras unidades
+*/
+
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class ExercicioJava00ConversorTemperatura {
     public static void main(String[] args) {
@@ -27,7 +33,7 @@ public class ExercicioJava00ConversorTemperatura {
         }
                 
         while(true) {
-            System.out.printf("Informe a temperatura na unidade informada: ");
+            System.out.printf("Informe a temperatura na unidade selecionada: ");
             try {
                 read = new Scanner(System.in);
                 temperatura = read.nextDouble();

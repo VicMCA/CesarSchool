@@ -82,7 +82,7 @@ def main():
     datas = []
     valores = []
 
-    with open('CesarSchool/CESARNextDesafioPython/PyFinanceiro/Recursos/dados_financeiro.txt', 'r') as dados:
+    with open('CesarSchool/Desafio-Python/PyFinanceiro/Recursos/dados_financeiro.txt', 'r') as dados:
         matriz = file_to_data(dados, matriz)
     
     datas, valores = (data_sort(datas, valores, matriz))

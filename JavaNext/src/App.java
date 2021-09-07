@@ -1,5 +1,11 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        /*
+        No momento estou usando este arquivo para realizar anotações
+        das aulas e testes rápidos. No futuro provavelmente será limpo
+        e utilizado para algum exercício ou projeto do curso.
+        */
+
         System.out.println("Hello,World!");
         System.out.print("Hello, World!");
         System.out.println("Hello, World... Deja vú?");
@@ -142,5 +148,37 @@ public class App {
                 System.out.println("Pagamento não realizado");
                 break;
         }
+
+        boolean ofAge = false;
+        int age = 18;
+        ofAge = age >= 18 ? true : false;
+
+        String result = ofAge == true ? "maior de idade" : "menor de idade";
+        System.out.println("A pessoa é " + result);
+        // Exemplo de operador ternário acima
+
+        // int arrayUm[];
+        // int[] arrayDois;
+        // int[] arrayTres = new int[10];
+        // int arrayQuatro[] = {1, 2, 3, 4, 5};
+        // boolean arrayCinco[] = {true, false};
+        String arraySeis[] = {"segunda", "Terça", "Quarta", "Quinta", "Sexta"};
+        // String arraySete[][] = {{"Um", "Dois"}, {"Três", "Quatro"}};
+        int arrayOito[][] = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9},
+        };
+        // Exemplos de arrays acima
+
+        System.out.println(arrayOito[0]);
+        System.out.println(arrayOito[1][1]);
+        System.out.println(arrayOito[2][0]);
+        // Exemplos de prints de array. O primeiro não funciona. Para isso use for como abaixo
+
+        for (int xx = 0; xx < arraySeis.length; xx++) {
+            System.out.println(arraySeis[xx]);
+        }
+        // Loop de for para varrer o array
     }
 }
