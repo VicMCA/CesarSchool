@@ -5,9 +5,9 @@ def main():
     um número inteiro informado pelo usuário.
     '''
     num = int(input('Informe um número inteiro para verificarmos os números primos entre um e ele: '))
-    lista_primos = []
+    lista_primos = [2]
 
-    for x in range(2, num + 1):
+    for x in range(3, num + 1, 2):
         divCount = 0
         for y in range(1, x+1):
             if x % y == 0:
