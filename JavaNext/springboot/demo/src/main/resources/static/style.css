@@ -1,0 +1,15 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #aaa;
+    background-color: #222;
+    height: fit-content;
+}
+.main {
+    text-align: center;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+}

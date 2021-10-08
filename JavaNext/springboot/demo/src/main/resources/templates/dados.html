@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div>
+            <h1>Dados</h1>
+            <h2>This is the "Dados" page.<br>Just to have some more content here.<h2>
+            <!-- <p>Current value sourced from "WaveController.java": [[${valorSubstituido}]]</p> -->
+            <p>Current value sourced from the Usuarios table<br>through the class "WaveController.java":</p>
+            <div th:each="user : ${usuarios}">
+                <h4> [[${user.nome}]] [[${user.sobrenome}]]</h4>
+                <h6 th:text="${user.login}"></h6>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

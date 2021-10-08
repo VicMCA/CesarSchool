@@ -1,0 +1,10 @@
++----+------------------+--------------+---------------+--------------+
+| id | nome             | sobrenome    | login         | senha        |
++----+------------------+--------------+---------------+--------------+
+|  1 | Sonic            | The Hedgehog | gtgfast       | chillidogs   |
+|  2 | Tails (Miles)    | Prower       | GeniusFox     | twicefast    |
+|  3 | Knuckles         | the Echidna  | SupaStronk    | 123456       |
+|  4 | Amy              | Rose         | CuteyHoney    | pikopikomf   |
+|  5 | Shadow           | the Hedgehog | ChaosSpawn    | dontevendare |
+|  6 | Dr. Ivo (Eggman) | Robotnik     | MachineMaster | 133763n1u5   |
++----+------------------+--------------+---------------+--------------+
